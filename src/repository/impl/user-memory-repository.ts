@@ -1,5 +1,8 @@
 import { User } from './../../model/user';
 import { UserRepository } from './../user-repository';
+/**
+ * In-memory depository
+ */
 export class UserMemoryRepository implements UserRepository{
     private storage: Map<string,User> = new Map();
     save(user: User): User {

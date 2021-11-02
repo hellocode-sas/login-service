@@ -6,6 +6,9 @@ import { ServiceResponse } from '../../events/out-events';
 import { LoginService } from './../login-service';
 import { UserRepository } from '../../repository/user-repository';
 
+/**
+ * Login service implementation
+ */
 export class LoginServiceImpl implements LoginService{
     private repository: UserRepository;
 
@@ -13,6 +16,11 @@ export class LoginServiceImpl implements LoginService{
         this.repository = repository;
     }
 
+    /**
+     * User creation method, looks for an inexistent username
+     * @param request
+     * @returns
+     */
    createUser(request: NewUser): ServiceResponse {
        const exists=  this.repository.exists(request.username);
         if(exists){
@@ -40,7 +48,13 @@ export class LoginServiceImpl implements LoginService{
         return { success: user?.active, data: user }
     }
 
+    /**
+     * Method to encrypt password
+     * @param pass
+     * @returns
+     */
     private encryptPassword(pass: string): string{
+        // TODO:create encryption SHA or MD5 logic.
         return pass;
     }
 

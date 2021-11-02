@@ -9,6 +9,9 @@ export interface NewUser{
     roles: string [];
 }
 
+/**
+ * User validation message object
+ */
 export interface UserValidation{
     username: string;
     password: string;

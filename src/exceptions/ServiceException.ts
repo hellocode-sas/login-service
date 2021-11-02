@@ -1,5 +1,8 @@
 import { ErrorType } from "./ErrorType";
 
+/**
+ * Custom exception
+ */
 export class ServiceException extends Error{
     readonly code: ErrorType;
 

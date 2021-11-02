@@ -2,6 +2,9 @@ import { ServiceResponse } from './../events/out-events';
 import { NewUser, UserValidation } from "../events/in-events";
 
 
+/**
+ * Login service definition
+ */
 export interface LoginService{
 
       /**

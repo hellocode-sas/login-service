@@ -1,3 +1,6 @@
+/**
+ * Business user model
+ */
 export interface User{
 
     name: string,

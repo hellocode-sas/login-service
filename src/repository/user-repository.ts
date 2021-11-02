@@ -1,4 +1,7 @@
 import { User } from '../model/user';
+/**
+ * User repository definition
+ */
 export interface UserRepository{
 
     /**

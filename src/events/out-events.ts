@@ -1,3 +1,6 @@
+/**
+ * Service response wrapper object
+ */
 export interface ServiceResponse{
     success : boolean;
     // detailed error message
